@@ -6,19 +6,19 @@ import { Content } from "./features/layout/components/Content"
 import { Footer } from "./features/layout/components/Footer"
 import Props from "./features/layout/components/Props"
 
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 function App() {
-
-
   return (
     <BrowserRouter>
-      <Header></Header>
-      <Routes>
-        <Route path="/" element={<Content></Content >}> </Route>
-        <Route path="/props" element={<Props></Props>}></Route>
-      </Routes>
-      <Footer></Footer>
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Content />} />
+          <Route path="/props" element={<Props />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }

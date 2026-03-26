@@ -41,15 +41,47 @@ export const Content = () => {
   ];
 
   return (
-    <main className="container-fluid px-4 pb-5 flex-grow-1" style={{ paddingTop: "20px" }}>
+    <main className="page-shell container py-2 pb-5">
+      <section className="hero-banner rounded-4 p-4 p-md-5 mb-4">
+        <div className="row align-items-center g-3">
+          <div className="col-lg-7">
+            <p className="section-kicker mb-2">Seleccion del dia</p>
+            <h2 className="display-6 fw-bold mb-2">Polleria</h2>
+            <p className="text-secondary mb-0">
+              Nuestros productos, los mejores pollos de la ciudad, unicos y con un sabor increible.
+            </p>
+          </div>
+
+          <div className="col-lg-5">
+            <div className="hero-stats">
+              <div>
+                <strong>{productos.length}</strong>
+                <span>productos</span>
+              </div>
+              <div>
+                <strong>Envio</strong>
+                <span>rapido</span>
+              </div>
+              <div>
+                <strong>Compra</strong>
+                <span>segura</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="row g-4">
         <div className="col-lg-8">
-          <h4 className="text-warning mb-3">Productos destacados</h4>
+          <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <h4 className="section-title mb-0">Productos destacados</h4>
+            <span className="section-badge">Especial del dia</span>
+          </div>
 
-          <div className="row">
+          <div className="row g-4">
             {productos.map((p) => (
-              <div className="col-sm-6 col-md-4 mb-4" key={p.id}>
-                <div className="card h-100 shadow bg-dark text-light">
+              <div className="col-sm-6 col-md-4" key={p.id}>
+                <div className="card product-card h-100 border-0 shadow-sm">
                   <img
                     src={p.img}
                     className="card-img-top"
@@ -57,12 +89,13 @@ export const Content = () => {
                     alt={p.nombre}
                   />
                   <div className="card-body d-flex flex-column">
+                    <span className="product-tag mb-2">Recomendado</span>
                     <h6 className="mb-1">{p.nombre}</h6>
-                    <p className="fw-bold text-success mb-2">
+                    <p className="fw-bold product-price mb-3">
                       ${p.precio} USD
                     </p>
                     <div className="d-flex gap-2 mt-auto">
-                      <button type="button" className="btn btn-warning btn-sm flex-fill">
+                      <button type="button" className="btn btn-outline-dark btn-sm flex-fill">
                         Editar
                       </button>
                       <button type="button" className="btn btn-danger btn-sm flex-fill">
@@ -77,28 +110,29 @@ export const Content = () => {
         </div>
 
         <div className="col-lg-4">
-          <div className="bg-white rounded shadow p-4" style={{ top: "150px" }}>
-            <h5 className="mb-3">Registro</h5>
+          <div className="checkout-card p-4">
+            <p className="section-kicker mb-2">Registro</p>
+            <h5 className="mb-3">Completa tu compra</h5>
 
-            <input className="form-control mb-2" placeholder="Nombre completo" />
-            <input className="form-control mb-2" placeholder="Correo electrónico" />
-            <input className="form-control mb-3" placeholder="Dirección" />
+            <input className="form-control form-soft mb-2" placeholder="Nombre completo" />
+            <input className="form-control form-soft mb-2" placeholder="Correo electronico" />
+            <input className="form-control form-soft mb-3" placeholder="Direccion" />
 
-            <hr/>
+            <hr />
 
             <h6>Pago digital</h6>
-            <input className="form-control mb-2" placeholder="Número de tarjeta" />
+            <input className="form-control form-soft mb-2" placeholder="Numero de tarjeta" />
 
             <div className="row">
               <div className="col-6">
-                <input className="form-control mb-2" placeholder="MM/AA" />
+                <input className="form-control form-soft mb-2" placeholder="MM/AA" />
               </div>
               <div className="col-6">
-                <input className="form-control mb-2" placeholder="CVV" />
+                <input className="form-control form-soft mb-2" placeholder="CVV" />
               </div>
             </div>
 
-            <button className="btn btn-success w-100 mt-2">
+            <button className="btn btn-success w-100 mt-2 fw-semibold">
               Confirmar compra
             </button>
           </div>
