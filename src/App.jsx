@@ -6,20 +6,18 @@ import { Content } from "./features/layout/components/Content"
 import { Footer } from "./features/layout/components/Footer"
 import Props from "./features/layout/components/Props"
 
-import { Routes, Route, HashRouter } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <HashRouter>
-      <div className="d-flex flex-column min-vh-100">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Content />} />
-          <Route path="/props" element={<Props />} />
-        </Routes>
-        <Footer />
-      </div>
-    </HashRouter>
+    <div className="d-flex flex-column min-vh-100">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Content />} />
+        <Route path="/props" element={<Props />} />
+      </Routes>
+      <Footer />
+    </div>
   )
 }
 
