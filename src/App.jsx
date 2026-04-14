@@ -6,11 +6,11 @@ import { Content } from "./features/layout/components/Content"
 import { Footer } from "./features/layout/components/Footer"
 import Props from "./features/layout/components/Props"
 
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="d-flex flex-column min-vh-100">
         <Header />
         <Routes>
@@ -19,7 +19,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
