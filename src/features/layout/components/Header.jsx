@@ -2,6 +2,8 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
+  const logoSrc = `${import.meta.env.BASE_URL}img/PolloAsado.jpg`;
+
   return (
     <header className="site-header py-3 mb-4 sticky-top">
       <div className="container">
@@ -9,7 +11,7 @@ export const Header = () => {
           <div className="d-flex align-items-center gap-3">
             <div className="brand-mark">
               <img
-                src="/img/PolloAsado.jpg"
+                src={logoSrc}
                 alt="Logo"
                 width="48"
                 height="48"

@@ -1,42 +1,43 @@
 import React from 'react'
 
 export const Content = () => {
+  const assetBase = `${import.meta.env.BASE_URL}img/`;
   const productos = [
     {
       id: 1,
       nombre: "Pollo Asado",
       precio: 1249,
-      img: "/img/pollo1.jpg",
+      img: `${assetBase}pollo1.jpg`,
     },
     {
       id: 2,
       nombre: "Pollo Asado con papas",
       precio: 999,
-      img: "/img/pollo2.jpg",
+      img: `${assetBase}pollo2.jpg`,
     },
     {
       id: 3,
       nombre: "pollo frito",
       precio: 1899,
-      img: "/img/pollo3.jpg",
+      img: `${assetBase}pollo3.jpg`,
     },
     {
       id: 4,
       nombre: "pollo para comer",
       precio: 59,
-      img: "/img/pollo4.jpg",
+      img: `${assetBase}pollo4.jpg`,
     },
     {
       id: 5,
       nombre: "Pollo rico",
       precio: 299,
-      img: "/img/pollo5.jpg",
+      img: `${assetBase}pollo5.jpg`,
     },
     {
       id: 6,
       nombre: "Pollo de Minecraft",
       precio: 59,
-      img: "/img/pollo6.jpg",
+      img: `${assetBase}pollo6.jpg`,
     },
   ];
 
