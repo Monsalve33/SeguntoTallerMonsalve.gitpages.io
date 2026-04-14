@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/SeguntoTallerMonsalve.gitpages.io/',
+  base: '/Segundo-Taller-React/',
   plugins: [
     react({
       babel: {
