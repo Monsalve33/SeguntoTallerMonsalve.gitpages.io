@@ -115,9 +115,6 @@ La aplicacion quedara disponible en el entorno local que Vite informe en consola
 
 ```bash
 npm run dev      # Inicia el servidor de desarrollo
-npm run build    # Genera build de produccion
-npm run preview  # Sirve localmente la build generada
-npm run lint     # Ejecuta analisis estatico con ESLint
 ```
 
 ## Enfoque de Diseno
