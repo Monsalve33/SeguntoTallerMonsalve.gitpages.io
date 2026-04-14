@@ -4,12 +4,15 @@ import 'bootstrap-icons/font/bootstrap-icons.min.css'
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { HashRouter } from 'react-router-dom'
 import './shared/styles/index.css'
 import './shared/styles/App.css'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <HashRouter>
+      <App />
+    </HashRouter>
   </StrictMode>,
 )
